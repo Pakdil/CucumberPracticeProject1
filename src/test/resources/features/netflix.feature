@@ -18,3 +18,14 @@ Feature: Movie suggestion feature
     When I go to homepage
     Then I should get right recommendations
 
+  Scenario: Movie search datatable map
+    Given I like below movie with certain type
+      | actions   | John Wick  |
+      | drama     | Titanic    |
+      | cartoon   | Tom&Jerry  |
+      | adventure | Tom Raider |
+
+
+
+
+
