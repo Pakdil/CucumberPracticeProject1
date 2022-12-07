@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import java.util.List;
+import java.util.Map;
 
 public class Netflix_StepDef {
 
@@ -18,7 +19,15 @@ public class Netflix_StepDef {
     public void i_like(List<String> movieTypes) {
         System.out.println("This is from Given List of StringDatatable" +movieTypes);
 
+    }
 
+    @Given("I like below movie with certain type")
+    public void i_like_below_movie_with_certain_type(Map<String, String> favoriteMovie) {
+        System.out.println(favoriteMovie);
+        System.out.println("favoriteMovie.get(\"actions\") = " + favoriteMovie.get("actions"));
+        System.out.println("favoriteMovie.get(\"drama\") = " + favoriteMovie.get("drama"));
+        System.out.println("favoriteMovie.get(\"cartoon\") = " + favoriteMovie.get("cartoon"));
+        System.out.println("favoriteMovie.get(\"adventure\") = " + favoriteMovie.get("adventure"));
 
     }
 
